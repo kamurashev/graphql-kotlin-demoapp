@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: graphql-kotlin-demoapp
+
+  flyway:
+    enabled: true
+
+  graphql:
+    graphiql:
+      enabled: true
