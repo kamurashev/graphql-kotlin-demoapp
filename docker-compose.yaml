@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: "postgres:15"
+    environment:
+      POSTGRES_DB: graphql-kotlin-demoapp
+      POSTGRES_USER: graphql-kotlin-demoapp
+      POSTGRES_PASSWORD: graphql-kotlin-demoapp
+    ports:
+      - '5432:5432'
+
+  zipkin:
+    image: "openzipkin/zipkin:2.23.16"
+    ports:
+      - '9411:9411'
+
+  graphql-kotlin-demoapp:
+    image: graphql-kotlin-demoapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - zipkin
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://postgres:5432/graphql-kotlin-demoapp"
+      SPRING_DATASOURCE_USERNAME: graphql-kotlin-demoapp
+      SPRING_DATASOURCE_PASSWORD: graphql-kotlin-demoapp
+      ZIPKIN_BASE_URL: "http://zipkin:9411"

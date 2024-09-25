@@ -1,0 +1,29 @@
+enum Department {
+    MINING
+    POWER_GENERATION
+    MAINTENANCE
+    ADMINISTRATION
+    LOGISTICS
+    SAFETY
+}
+
+enum OverhaulStatus {
+    PENDING
+    IN_PROGRESS
+    COMPLETED
+    CANCELED
+}
+
+enum Position {
+    MANAGER
+    SUPERVISOR
+    TECHNICIAN
+    ENGINEER
+    OPERATOR
+    ADMINISTRATOR
+}
+
+enum StaffStatus {
+    ACTIVE
+    INACTIVE
+}

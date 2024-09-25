@@ -1,0 +1,31 @@
+type Mutation {
+    createFacility(
+        name: String!,
+        address: String!,
+        department: Department!
+    ): Facility!
+
+    createEquipment(
+        name: String!,
+        type: String!,
+        facilityId: ID!
+    ): Equipment!
+
+    createOverhaul(
+        description: String!,
+        date: String!,
+        status: OverhaulStatus!,
+        equipmentId: ID!
+    ): Overhaul!
+
+    createStaff(
+        firstName: String!,
+        lastName: String!,
+        phone: String!,
+        position: Position!,
+        department: Department!,
+        grade: Int!,
+        status: StaffStatus!,
+        facilityId: ID!
+    ): Staff!
+}

@@ -1,0 +1,56 @@
+type Facility {
+    id: ID!
+    name: String!
+    address: String!
+    department: Department!
+    guid: ID!
+    createdDate: String!
+    updatedDate: String!
+    createdBy: ID
+    updatedBy: ID
+    equipments: [Equipment]
+    staffs: [Staff]
+}
+
+type Equipment {
+    id: ID!
+    name: String!
+    type: String!
+    facility: Facility!
+    guid: ID!
+    createdDate: String!
+    updatedDate: String!
+    createdBy: ID
+    updatedBy: ID
+    overhauls: [Overhaul]
+}
+
+type Overhaul {
+    id: ID!
+    description: String!
+    date: String!
+    status: OverhaulStatus!
+    equipment: Equipment!
+    guid: ID!
+    createdDate: String!
+    updatedDate: String!
+    createdBy: ID
+    updatedBy: ID
+}
+
+type Staff {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    phone: String!
+    position: Position!
+    department: Department!
+    grade: Int!
+    status: StaffStatus!
+    facility: Facility!
+    guid: ID!
+    createdDate: String!
+    updatedDate: String!
+    createdBy: ID
+    updatedBy: ID
+}

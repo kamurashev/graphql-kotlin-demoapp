@@ -1,0 +1,13 @@
+type Query {
+    facilities: [Facility!]!
+    facilityById(id: ID!): Facility
+
+    equipments: [Equipment!]!
+    equipmentById(id: ID!): Equipment
+
+    overhauls: [Overhaul!]!
+    overhaulById(id: ID!): Overhaul
+
+    staffs: [Staff!]!
+    staffById(id: ID!): Staff
+}

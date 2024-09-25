@@ -8,3 +8,9 @@ spring:
   graphql:
     graphiql:
       enabled: true
+      path: /graphiql
+
+  datasource:
+    url: "jdbc:postgresql://postgres:5432/graphql-kotlin-demoapp"
+    username: graphql-kotlin-demoapp
+    password: graphql-kotlin-demoapp

@@ -1,5 +1,5 @@
 # Use an official Eclipse Temurin 21 JRE headless image as the base image
-FROM eclipse-temurin:21-jre-headless
+FROM eclipse-temurin:21-jre
 
 # Set the working directory in the container
 WORKDIR /app
